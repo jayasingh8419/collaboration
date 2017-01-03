@@ -1,0 +1,4 @@
+config\DBConfig.class
+config\WebAppInitializer.class
+config\Test.class
+config\WebAppConfig.class
