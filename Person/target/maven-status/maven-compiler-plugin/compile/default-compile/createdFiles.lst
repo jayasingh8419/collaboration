@@ -1,0 +1,6 @@
+com\restsample\springmvc\services\PersonService.class
+com\restsample\springmvc\dao\PersonDao.class
+com\restsample\springmvc\model\Person.class
+com\restsample\springmvc\dao\PersonDaoImpl.class
+com\restsample\springmvc\controller\PersonController.class
+com\restsample\springmvc\services\PersonServiceImpl.class
