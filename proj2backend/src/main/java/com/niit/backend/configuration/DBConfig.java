@@ -13,7 +13,11 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.backend.model.BlogComment;
+import com.niit.backend.model.BlogPost;
+import com.niit.backend.model.Friend;
 import com.niit.backend.model.Job;
+import com.niit.backend.model.UploadFile;
 import com.niit.backend.model.User;
 
 @Configuration
@@ -30,9 +34,10 @@ public class DBConfig {
 		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 		hibernateProperties.setProperty("hibernate.show_sql", "true");
 		lsf.addProperties(hibernateProperties);
-		Class classes[]={User.class};
-		return lsf.addAnnotatedClasses(User.class)
-				.addAnnotatedClass(Job.class)
+		Class classes[]={User.class,Job.class,Friend.class,UploadFile.class,BlogPost.class,BlogComment.class};
+		return lsf.addAnnotatedClasses(classes)
+				/*.addAnnotatedClass(Job.class)
+				.addAnnotatedClass(UploadFile.class)*/
 		   .buildSessionFactory();
 	}
 	@Bean
