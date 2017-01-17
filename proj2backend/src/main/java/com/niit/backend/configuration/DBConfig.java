@@ -17,6 +17,8 @@ import com.niit.backend.model.BlogComment;
 import com.niit.backend.model.BlogPost;
 import com.niit.backend.model.Friend;
 import com.niit.backend.model.Job;
+import com.niit.backend.model.Message;
+import com.niit.backend.model.OutputMessage;
 import com.niit.backend.model.UploadFile;
 import com.niit.backend.model.User;
 
