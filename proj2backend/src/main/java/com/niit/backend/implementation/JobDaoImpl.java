@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 
 import com.niit.backend.dao.JobDao;
 import com.niit.backend.model.Job;
+
+
 @Repository
 public class JobDaoImpl implements JobDao {
 	@Autowired
@@ -32,5 +34,13 @@ private SessionFactory sessionFactory;
 		session.close();
 		return jobs;
 	}
+	@Override
+	public Job getJobDetail(int jobId) {
+		Session session=sessionFactory.openSession();
+		Job job=(Job)session.get(Job.class, jobId);
+		session.close();
+		return job;
+	}
+	
 
 }
