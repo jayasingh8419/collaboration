@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<style>
+.info{
+width: 150px;
+  text-align: center;
+  margin:0 auto;
+text-color: white
+}
+</style>
+<head>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <!-- <link href="_css/style.css" rel="stylesheet" type="text/css" />   -->
+  </head>
+  <body > <br><br>
+      <form ng-submit="addMessage()" name="messageForm">
+        <div style="text-align:center;"><input type="text" style="height:50px;" placeholder="Compose a new message..." size="70"  ng-model="message" /></div>
+       
+       <br><br>
+       
+        <div class="info">
+          <span class="count" style="color:#ffcc99;font-size:130%;" ng-bind="max - message.length" ng-class="{danger: message.length > max}">140</span>
+          <button ng-disabled="message.length > max || message.length === 0">Send</button>
+        </div>
+      </form>
+      <hr />
+      <p style="color:#ffcc99;font-family:verdana;font-size:120%;" ng-repeat="message in messages | orderBy:'time':true" class="message">
+        <time>{{message.time | date:'HH:mm'}}</time>
+        <span ng-class="{self: message.self}">{{message.message}}</span>
+      </p>
+
+    
+</body>
+</html>
+
+
+

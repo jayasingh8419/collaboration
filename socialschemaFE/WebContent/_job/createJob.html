@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SocialSchema Sign Up</title>
+
+<style>
+form {
+   padding-top:50px;
+    border: 5px solid #f1f1f1;
+     background-image:url('wall.png');
+     background-size:cover;
+    padding-bottom: 70px;
+     
+}
+
+ input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+
+ 
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+  
+    width:70%;
+
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+ 
+
+</style>
+</head>
+<body>
+<form> 
+
+<div class="container">
+    <label><b>Job Title</b></label>
+<input type="text" STYLE="background-color:#ffe6cc;" ng-model="job.jobTitle" placeholder="Enter Job Title" required>
+<br>
+
+ <label><b>Job Description</b></label>
+<input type="text" STYLE="background-color:#ffe6cc;" ng-model="job.jobDescription" placeholder="Enter Description here" required>
+
+ <label><b>Skills Required</b></label>
+<input type="text" STYLE="background-color:#ffe6cc;" ng-model="job.skillsRequired" placeholder="Required skills" required>
+
+ <label><b>Salary</b></label>
+<input type="text" STYLE="background-color:#ffe6cc;" ng-model="job.salary" placeholder="Salary">
+
+
+<label><b>Location</b></label>
+<input type="text" STYLE="background-color:#ffd9b3"; ng-model="job.location" placeholder="Location">
+
+<button type="submit" ng-click="saveJob()" class="btn btn-info">Post Job</button>
+</div>
+
+
+</form>
+
+
+</body>
+</html>
+
+
