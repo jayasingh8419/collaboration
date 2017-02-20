@@ -35,7 +35,7 @@ th {
 <th>Title</th>
 <th>Created By</th>
 <th>Created On</th>
-<th ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username">DELETE</th>
+<td ng-show="currentUser.role=='ADMIN' || currentUser.role=='EMPLOYEE' || currentUser.role=='STUDENT' || currentUser.username==blogPost.createdBy.username">DELETE</th>
 
 </tr>
 <tr ng-repeat="blogPost in blogPosts | orderBy:'date':true | filter:search">
@@ -45,7 +45,7 @@ th {
 <td>Created On: {{blogPost.createdOn | date:'MM/dd/yyyy HH:mm'}}</td>
 
 
-<td ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username"><a href="" ng-click="deleteBlog(blogPost.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash"></span></a></td>
+<td ng-show="currentUser.role=='ADMIN' || currentUser.role=='EMPLOYEE' || currentUser.role=='STUDENT' || currentUser.username==blogPost.createdBy.username"><a href="" ng-click="deleteBlog(blogPost.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash"></span></a></td>
 </tr>
 </table>
 </div>

@@ -10,7 +10,7 @@
 Pending Requests</p>
 <table>
 <tr ng-repeat="p in pendingRequest">
-<td>{{p.fromId}}</td>
+<td style="color:#ffcc99;font-family:verdana;font-size:150%;"> {{p.fromId}} &nbsp&nbsp&nbsp&nbsp</td>
 <td><a href="" ng-click="updatePendingRequest(p.fromId,'A')" class="btn btn-default">Accept</a></td>
 <td><a href="" ng-click="updatePendingRequest(p.fromId,'D')" class="btn btn-default">Deny</a></td>
 </tr>

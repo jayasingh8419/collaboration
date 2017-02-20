@@ -46,14 +46,13 @@ public class UserController {
 			Error error = new Error(1, "Username and password doesnt exists...");
 			return new ResponseEntity<Error>(error, HttpStatus.UNAUTHORIZED); // 401
 		} else {
-			// key [user] value [validUser- an object of type User]
-			// user = [james,123,james@xyz.com,student,true,true]
+			
 			session.setAttribute("user", validUser);
 			validUser.setOnline(true);
 			userDao.updateUser(validUser); // to update online status in db
 			logger.debug("validUser is not null");
 
-			// select * from proj2_profile_pics where username='adam';
+			
 			UploadFile getUploadFile = fileUploadDao.getFile(user.getUsername());
 			if (getUploadFile != null) {
 				String name = getUploadFile.getFileName();
@@ -63,7 +62,7 @@ public class UserController {
 					String path = "C:/Users/JAYA/Desktop/eclipse/2ndproj/socialschema/src/main/webapp/WEB-INF/resources/images/"
 							+ user.getUsername();
 					File file = new File(path);
-					// file.mkdirs();
+					
 					FileOutputStream fos = new FileOutputStream(file);// to Write some data
 					fos.write(imagefiles);
 					fos.close();
@@ -81,7 +80,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
-		// client will send only username, password, email, role
+		
 		try {
 			logger.debug("USERCONTROLLER=>REGISTER " + user);
 			user.setStatus(true);

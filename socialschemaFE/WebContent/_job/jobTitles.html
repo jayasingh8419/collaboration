@@ -27,7 +27,7 @@ th{
 			<th>Posted Date</th>
 			<th>Salary</th>
 			<th>Skills Required</th>
-			<th ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username">DELETE</th>
+			<!-- <th ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username">DELETE</th> -->
 			</tr>
 		</thead>
 		<tbody >
@@ -39,8 +39,8 @@ th{
 				<td>{{job.postedOn}}</td>
 				<td>{{job.salary}}</td>
 				<td>{{job.skillsRequired}}</td>
-				<td ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username"><a href="" ng-click="deleteBlog(blogPost.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash"></span></a></td>
-
+				<!-- <td ng-show="currentUser.role=='ADMIN' || currentUser.username==blogPost.createdBy.username"><a href="" ng-click="deleteBlog(blogPost.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash"></span></a></td>
+ -->
 				<!--   <a href="#/getJobById/{{job.jobId}}" >{{job.jobTitle}}</a>  -->
 				<!-- <a href=""ng-click="getJobById(job.jobId)" >{{job.jobTitle}}</a> -->
 

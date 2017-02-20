@@ -41,7 +41,8 @@ app.controller('UserController',function($scope,$rootScope,$cookieStore,$locatio
 	
 	
 	
-	/** To Send FriendRequest from listOfUsers*/
+	/*To Send FriendRequest from listOfUsers
+	*/
 	$scope.friendRequest=function(username){
 		alert('friendRequest in userController')
 		console.log('friendrequest function')

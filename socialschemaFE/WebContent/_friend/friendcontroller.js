@@ -39,7 +39,7 @@ app.controller('FriendController',function($scope,$location,FriendService){
 			$location.path('/friendsList')
 			}
 			else{
-				alert('You have denied the friend requet')
+				alert('You have denied the friend request')
 			}
 		},function(response){
 			console.log(response.log)
